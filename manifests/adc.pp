@@ -1,3 +1,46 @@
+# Define: gitolite::adc
+#
+# Manage the installation and removal of gitolite admin defined commands
+#
+# == Parameters
+#
+# [*ensure*]
+#
+# Whether to create or remove the ADC.
+#
+# Default: present
+#
+# [*source*]
+#
+# The source of the ADC file on the server.
+#
+# Defaults to puppet:///modules/gitolite/adc/${name}
+#
+# [*mode*]
+#
+# The file mode to apply to the file. If a file is not executable then
+# gitolite will not list it as an available ADC.
+#
+# Default: 0700
+#
+# == Example
+#
+#     gitolite::adc { 'adc.common-functions': mode => '0600'}
+#     gitolite::adc { 'help': }
+#     gitolite::adc { 'hub': }
+#     gitolite::adc { 'fork': }
+#     gitolite::adc { 'unlock': }
+#     gitolite::adc { 'lock': }
+#     gitolite::adc { 'trash': }
+#
+# == Author
+#
+# Adrien Thebo <adrien@puppetlabs.com>
+#
+# == Copyright
+#
+# Copyright 2012 Puppet Labs, unless otherwise noted
+#
 define gitolite::adc($ensure = present, $source = "puppet:///modules/gitolite/adc/${name}", $mode = '0700'){
 
   require gitolite::instance

@@ -1,6 +1,31 @@
 # = Class: gitolite::install
 #
-# Backports requires the backports repo available. Fo shizzle.
+# Installs gitolite
+#
+# == Parameters
+#
+# [*source*]
+#
+# The source to install from. One of [backports, git, package]
+#
+# Default: hiera('gitolite_install_source')
+#
+# == Example
+#
+#     include gitolite::install
+#
+#     class { 'gitolite::install':
+#       source => 'git',
+#     }
+#
+# == Author
+#
+# Adrien Thebo <adrien@puppetlabs.com>
+#
+# == Copyright
+#
+# Copyright 2012 Puppet Labs, unless otherwise noted
+#
 class gitolite::install($source = hiera('gitolite_install_source')) {
 
   case $source {

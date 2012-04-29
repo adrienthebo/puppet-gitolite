@@ -1,3 +1,19 @@
+# Class: gitolite::data
+#
+# Centralize gitolite data storage. Used by hiera.
+#
+# == Example
+#
+# This class should not be directly included.
+#
+# == Author
+#
+# Adrien Thebo <adrien@puppetlabs.com>
+#
+# == Copyright
+#
+# Copyright 2012 Puppet Labs, unless otherwise noted
+#
 class gitolite::data {
 
   ##############################################################################

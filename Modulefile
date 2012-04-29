@@ -1,11 +1,12 @@
 name    'adrienthebo-gitolite'
 version '0.0.1'
-source 'UNKNOWN'
+source 'https://github.com/adrienthebo/puppet-gitolite'
 author 'Adrien Thebo'
 license 'Apache 2.0'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
+summary 'Install and configure Gitolite'
+description 'Install and configure Gitolite, ADCs, Gitweb and other ocmponents'
+project_page* 'https://github.com/adrienthebo/puppet-gitolite'
 
 ## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+dependency 'puppetlabs/stdlib', '>= 0.0.1'
+dependency 'adrienthebo/gitweb', '>= 0.0.1'
