@@ -1,12 +1,18 @@
 # = Class: gitolite::install
 #
-# Installs gitolite
+# Installs gitolite from source, backports, or git.
 #
 # == Parameters
 #
 # [*source*]
 #
-# The source to install from. One of [backports, git, package]
+# The source to install from.
+#
+# Available options:
+#
+# * backports - install from debian packports. Debian only.
+# * git - install the latest release from github.com/sitaramc/gitolite
+# * package - install from system packages.
 #
 # Default: hiera('gitolite_install_source')
 #

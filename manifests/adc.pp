@@ -1,8 +1,12 @@
-# Define: gitolite::adc
+# = Define: gitolite::adc
 #
 # Manage the installation and removal of gitolite admin defined commands
 #
 # == Parameters
+#
+# [*title*]
+#
+# The name of the ADC to install.
 #
 # [*ensure*]
 #
@@ -32,6 +36,12 @@
 #     gitolite::adc { 'unlock': }
 #     gitolite::adc { 'lock': }
 #     gitolite::adc { 'trash': }
+#
+# == Notes
+#
+# At the publishing of this module, all ADCs available at the time have been
+# vendored, so it if comes in gitolite/contrib, you can add it without having
+# to specify a source.
 #
 # == Author
 #
